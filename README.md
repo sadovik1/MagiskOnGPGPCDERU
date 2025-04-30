@@ -241,9 +241,45 @@
 - [Advanced Root Checker](https://play.google.com/store/apps/details?id=com.anu.developers3k.rootchecker)
 - [Lawnchair](https://github.com/LawnchairLauncher/lawnchair?tab=readme-ov-file)
 - [Shortcut Maker](https://play.google.com/store/apps/details?id=rk.android.app.shortcutmaker)
-- [Soft Keys 2](https://github.com/dogusumit/SoftKeys2-HomeBackButton?tab=readme-ov-file) или [Back Button](https://play.google.com/store/apps/details?id=mavie.shadowsong.bb)
+- [Soft Keys 2](https://github.com/dogusumit/SoftKeys2-HomeBackButton?tab=readme-ov-file) or [Back Button](https://play.google.com/store/apps/details?id=mavie.shadowsong.bb)
 - [KillApps](https://play.google.com/store/apps/details?id=com.tafayor.killall)
 - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
 - [Amaze File Manager](https://github.com/TeamAmaze/AmazeFileManager?tab=readme-ov-file)
 - [Fossify Gallery](https://github.com/FossifyOrg/Gallery?tab=readme-ov-file)
-- [Magisk Modules Repo Loader (MMRL)](https://github.com/D
+- [Magisk Modules Repo Loader (MMRL)](https://github.com/DerGoogler/MMRL?tab=readme-ov-file)
+- [App Manager](https://github.com/MuntashirAkon/AppManager?tab=readme-ov-file)
+- [DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup?tab=readme-ov-file)
+- [Termux](https://github.com/termux/termux-app?tab=readme-ov-file)
+- [AFWall+](https://github.com/ukanth/afwall?tab=readme-ov-file)
+- [Game Guardian](https://gameguardian.net/download) - [Bypass SDK enforcement](https://gameguardian.net/forum/topic/38963-game-guardian-android-14/)
+
+
+**## **Другие****
+
+### **Навигация по GPGPCDE**
+
+Горячие клавиши GPGPCDE:
+- <kbd>Ctrl</kbd> + <kbd>h</kbd>: нажать кнопку "Домой"
+- <kbd>Ctrl</kbd> + <kbd>b</kbd> или <kbd>Esc</kbd>: нажать кнопку "Назад"
+- <kbd>Ctrl</kbd> + <kbd>a</kbd>: открыть меню приложений (главный экран)
+- <kbd>Ctrl</kbd> + <kbd>w</kbd>: открыть "Виджеты" (главный экран)
+- <kbd>F11</kbd> или <kbd>Alt</kbd> + <kbd>Enter</kbd>: переключение между полноэкранным и оконным режимом
+- <kbd>Shift</kbd> + <kbd>Tab</kbd>: открыть оверлей Google Play Games на ПК, включая текущие назначения клавиш для Input SDK
+
+Примечание: <kbd>Ctrl</kbd> + <kbd>h</kbd> и <kbd>Ctrl</kbd> + <kbd>b</kbd> предоставляются только для целей разработки. Не полагайтесь на них в готовой игре.
+
+
+### [**Скриншот**](./screenshot/README.md)
+
+
+### [****Метод: 2**]**(./2/README.md)
+
+ㅤ
+## **Благодарность**
+
+- [XDA Forums t-4486817#post-89464596](https://xdaforums.com/t/4486817/post-89464596)
+- [ChsBuffer](https://github.com/chsbuffer)
+- [XDA Forums t-4656397](https://xdaforums.com/t/4656397/)
+- [XDA Sideloading apps on GPGPCDE](https://www.xda-developers.com/sideload-apps-on-google-play-games-emulator/)
+- [kilObit 7496373535076556798](https://kil0bit.blogspot.com/2023/11/google-launched-official-android.html)
+- [Phandroid p-339416](https://phandroid.com/?p=339416)
