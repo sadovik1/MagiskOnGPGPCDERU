@@ -5,6 +5,7 @@
 > Этот репозиторий создан на основе комментария в [XDA Forums t-4486817#post-89464596](https://xdaforums.com/t/4486817/post-89464596).
 
 ㅤ
+
 ## Содержание
 
 - [Минимальные системные требования](#минимальные-системные-требования)
@@ -32,6 +33,7 @@
 - [Благодарности](#благодарности)
 
 ㅤ
+
 ## Минимальные системные требования
 
 - **ОС**: Windows 10 (v2004)
@@ -47,6 +49,7 @@
 **Примечание**: подробнее о требованиях можно [прочитать здесь](https://support.google.com/googleplay?p=eligibility_requirements).
 
 ㅤ
+
 ## Установка
 
 ### 1. Требования
@@ -58,6 +61,7 @@
 - [7-Zip](https://7-zip.org/)
 
 ㅤ
+
 ### 2. Google Play Games on PC Developer Emulator (GPGPCDE)
 
 1. Скачайте и установите **GPGPCDE** (стабильная версия).
@@ -65,7 +69,8 @@
 3. Разрешите `USB debugging`, отметьте `Always allow from this computer`, затем нажмите `Allow`.
 
 ㅤ  
-**Примечание**: 
+**Примечание**:
+
 - При **выходе из системы** локальные **файлы устройства**, включая **установленные приложения/игры**, будут <ins>**удалены**</ins>.
 - Если страница **GPGPCDE** отображается пустой (режим сна), используйте:
   - Клавиши **PgDn** <kbd>↓</kbd>
@@ -74,21 +79,23 @@
 - [Навигация (горячие клавиши)](#gpgpcde-навигация)
 
 ㅤ
+
 ### 3. Aow Tools
 
 1. Установите **Aow Tools**, нажав кнопку **Free Trial**.  
-  Не беспокойтесь, эта версия поддерживает <ins>неограниченное использование</ins>.  
-  Вы можете **поддержать** разработчика, купив приложение.
+   Не беспокойтесь, эта версия поддерживает <ins>неограниченное использование</ins>.  
+   Вы можете **поддержать** разработчика, купив приложение.
 2. Откройте **Aow Tools** и нажмите `⚙ Settings` в левой панели навигации.
-    - Раздел `Adb Config` > `Adb.exe Current Path` > `Select Adb.exe`
-    - Вставьте следующий путь в адресную строку Проводника:  
-    `C:\Program Files\Google\Play Games Developer Emulator\current\emulator`
-    - Добавьте файл `adb.exe`.
+   - Раздел `Adb Config` > `Adb.exe Current Path` > `Select Adb.exe`
+   - Вставьте следующий путь в адресную строку Проводника:  
+     `C:\Program Files\Google\Play Games Developer Emulator\current\emulator`
+   - Добавьте файл `adb.exe`.
 3. Откройте **Aow Tools** и нажмите `? Help` в левой панели навигации.
 4. В разделе `Remove local loopback restrictions` используйте первый метод с **CMD** (от имени администратора).
 5. Нажмите `Device`. Устройство **GPGPCDE** (`vsoc_kiwi_x86_64`) будет отображаться со статусом `Online`.
 
 ㅤ
+
 ### 4. Magisk
 
 1. Скачайте приложение **Magisk**.
@@ -97,6 +104,7 @@
 4. Откройте **GPGPCDE**, **Magisk** появится в меню приложений.
 
 ㅤ
+
 ### 5. Создание папки
 
 1. Откройте **Проводник**.
@@ -104,6 +112,7 @@
 3. Создайте папку "**GPGPCDE**".
 
 ㅤ
+
 ### 6. Копирование/резервное копирование `aggregate.img` и `bios.rom`
 
 1. Перейдите в `C:\Program Files\Google\Play Games Developer Emulator\current\emulator\avd`
@@ -111,6 +120,7 @@
 3. Откройте файл `aggregate.img` в **7-Zip** и извлеките файл `1.boot_a.img`.
 
 ㅤ
+
 ### 7. Патч `1.boot_a.img`
 
 1. Откройте **Aow Tools** > `File` > `Download` > нажмите `↑ Upload` (нижняя панель).
@@ -124,65 +134,79 @@
 9. Сохраните в `%UserProfile%\Desktop\GPGPCDE`.
 
 ㅤ
+
 ### 8. Редактирование `magisk_patched-xxxxx_xxxxx.img`
 
 1. Скачайте и распакуйте **HxD Portable**.
 2. Откройте `magisk_patched-xxxxx_xxxxx.img` в **HxD**.
 3. Откройте замену (<kbd>Ctrl</kbd>+<kbd>r</kbd>) > `Text-string`:
-    - **Найти**: `,avb=vbmeta`
-    - **Заменить**: "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;" (без кавычек) `11`
-    - **Направление**: `All`
-    - Выберите `Prompt on replace` (опционально)
-    - Нажмите `OK`
 
-      ![GPGPCDE-edit-magisk-patched-replace](./images/GPGPCDE-edit-magisk-patched-replace.png)
+   - **Найти**: `,avb=vbmeta`
+   - **Заменить**: "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;" (без кавычек) `11`
+   - **Направление**: `All`
+   - Выберите `Prompt on replace` (опционально)
+   - Нажмите `OK`
 
-      ![GPGPCDE-edit-magisk-patched-replace](./images/GPGPCDE-edit-magisk-patched-before-after.png)
+     ![GPGPCDE-edit-magisk-patched-replace](./images/GPGPCDE-edit-magisk-patched-replace.png)
+
+     ![GPGPCDE-edit-magisk-patched-replace](./images/GPGPCDE-edit-magisk-patched-before-after.png)
+
 4. Выделите **все** байты файла (<kbd>Ctrl</kbd>+<kbd>a</kbd>), затем ПКМ > `Select block...` (<kbd>Ctrl</kbd>+<kbd>e</kbd>).
 5. Скопируйте значение в разделе `Length`.
 
-    ![GPGPCDE-edit-magisk-patched-select](./images/GPGPCDE-edit-magisk-patched-select.png)
+   ![GPGPCDE-edit-magisk-patched-select](./images/GPGPCDE-edit-magisk-patched-select.png)
 
 ㅤ
+
 ### 9. Добавление пропатченного образа загрузки в `aggregate.img`
 
 1. Откройте `aggregate.img` в **HxD**.
 2. Откройте поиск (<kbd>Ctrl</kbd>+<kbd>f</kbd>) > `Text-string`:
-    - **Найти**: `ANDROID!`
-    - **Направление**: `All`
-    - Нажмите `Search all`
 
-      ![GPGPCDE-add-patched-boot-image-search](./images/GPGPCDE-add-patched-boot-image-search.png)
+   - **Найти**: `ANDROID!`
+   - **Направление**: `All`
+   - Нажмите `Search all`
+
+     ![GPGPCDE-add-patched-boot-image-search](./images/GPGPCDE-add-patched-boot-image-search.png)
+
 3. В `Result` > `Search ({N} hits)` > дважды кликните последнее совпадение.
 
-    ![GPGPCDE-add-patched-boot-image-search-result](./images/GPGPCDE-add-patched-boot-image-search-result.png)
-4. ПКМ на выделенном тексте > `Select block...`:
-    - Введите **длину** файла `magisk_patched-xxxxx_xxxxx.img` ([#8-5](#8-редактирование-magisk_patched-xxxxx_xxxxximg)).
-    - Нажмите `OK`
+   ![GPGPCDE-add-patched-boot-image-search-result](./images/GPGPCDE-add-patched-boot-image-search-result.png)
 
-      ![GPGPCDE-add-patched-boot-image-select](./images/GPGPCDE-add-patched-boot-image-select.png)
+4. ПКМ на выделенном тексте > `Select block...`:
+
+   - Введите **длину** файла `magisk_patched-xxxxx_xxxxx.img` ([#8-5](#8-редактирование-magisk_patched-xxxxx_xxxxximg)).
+   - Нажмите `OK`
+
+     ![GPGPCDE-add-patched-boot-image-select](./images/GPGPCDE-add-patched-boot-image-select.png)
+
 5. Вернитесь в `magisk_patched-xxxxx_xxxxx.img`, скопируйте все байты ([#8-4](#8-редактирование-magisk_patched-xxxxx_xxxxximg)).
 6. Замените выделенный текст в `aggregate.img` скопированными байтами.
 
-    ![GPGPCDE-add-patched-boot-image-before-after](./images/GPGPCDE-add-patched-boot-image-before-after.png)
+   ![GPGPCDE-add-patched-boot-image-before-after](./images/GPGPCDE-add-patched-boot-image-before-after.png)
+
 7. **Сохраните**.
 
 ㅤ
+
 ### 10. Редактирование `bios.rom`
 
 1. Откройте `bios.rom` в **HxD**.
 2. Откройте замену (<kbd>Ctrl</kbd>+<kbd>r</kbd>) > `Text-string`:
-    - **Найти**: `verified_`
-    - **Заменить**: "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;" (без кавычек) `9`
-    - **Направление**: `All`
-    - Нажмите `OK`
 
-      ![GPGPCDE-edit-bios.rom-replac](./images/GPGPCDE-edit-bios.rom-replace.png)
+   - **Найти**: `verified_`
+   - **Заменить**: "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;" (без кавычек) `9`
+   - **Направление**: `All`
+   - Нажмите `OK`
 
-      ![GPGPCDE-edit-bios.rom-before-after](./images/GPGPCDE-edit-bios.rom-before-after.png)
+     ![GPGPCDE-edit-bios.rom-replac](./images/GPGPCDE-edit-bios.rom-replace.png)
+
+     ![GPGPCDE-edit-bios.rom-before-after](./images/GPGPCDE-edit-bios.rom-before-after.png)
+
 3. **Сохраните**.
 
 ㅤ
+
 ### 11. Замена на пропатченные файлы
 
 1. В системном трее нажмите ПКМ на иконке **GPGPCDE** > `Exit`.
@@ -192,6 +216,7 @@
 5. Дождитесь перезагрузки **GPGPCDE**.
 
 ㅤ
+
 ### 12. Удаление ограничений на установку
 
 1. Скачайте модуль Magisk [`HPESuperpower.zip`](https://github.com/sekedus/MagiskOnGPGPCDE/raw/refs/heads/main/module/HPESuperpower.zip) от [ChsBuffer](https://github.com/chsbuffer).
@@ -206,6 +231,7 @@
 10. Нажмите `Reboot`, дождитесь перезагрузки.
 
 ㅤ
+
 ## Установка приложений
 
 ### AdAway
@@ -218,24 +244,26 @@
 6. Синхронизируйте **AdAway** > `NEXT` > `FINISH`.
 
 ㅤ
+
 ### Aurora Store
 
 1. Установите [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore) через **Aow Tools**.
 2. Настройте **Aurora Store**:
-    - Разрешите:
-      - `Installer Permission`
-      - `External Storage Manager`
-      - `Background Downloads`
-      - `Notifications`
-      - `App Links`
-    - Нажмите `Finish`.
+   - Разрешите:
+     - `Installer Permission`
+     - `External Storage Manager`
+     - `Background Downloads`
+     - `Notifications`
+     - `App Links`
+   - Нажмите `Finish`.
 3. Нажмите **3 точки** в правом верхнем углу:
-    - `Spoof manager` > выберите устройство (например, `Samsung S20 Ultra`) > `Restart`.
-    - `Settings` > `Installation` > `Installation method` > предоставьте **root-доступ** > выберите `Root installer`.
-    - `Settings` > `Updates` > `Auto-update apps` > `Do not auto-update apps`.
+   - `Spoof manager` > выберите устройство (например, `Samsung S20 Ultra`) > `Restart`.
+   - `Settings` > `Installation` > `Installation method` > предоставьте **root-доступ** > выберите `Root installer`.
+   - `Settings` > `Updates` > `Auto-update apps` > `Do not auto-update apps`.
 4. Войдите как `Anonymous`.
 
 ㅤ
+
 ### Другие приложения
 
 - [Advanced Root Checker](https://play.google.com/store/apps/details?id=com.anu.developers3k.rootchecker)
@@ -253,12 +281,10 @@
 - [AFWall+](https://github.com/ukanth/afwall?tab=readme-ov-file)
 - [Game Guardian](https://gameguardian.net/download) - [Bypass SDK enforcement](https://gameguardian.net/forum/topic/38963-game-guardian-android-14/)
 
-
-**## **Другие****
-
 ### **Навигация по GPGPCDE**
 
 Горячие клавиши GPGPCDE:
+
 - <kbd>Ctrl</kbd> + <kbd>h</kbd>: нажать кнопку "Домой"
 - <kbd>Ctrl</kbd> + <kbd>b</kbd> или <kbd>Esc</kbd>: нажать кнопку "Назад"
 - <kbd>Ctrl</kbd> + <kbd>a</kbd>: открыть меню приложений (главный экран)
@@ -268,13 +294,12 @@
 
 Примечание: <kbd>Ctrl</kbd> + <kbd>h</kbd> и <kbd>Ctrl</kbd> + <kbd>b</kbd> предоставляются только для целей разработки. Не полагайтесь на них в готовой игре.
 
-
 ### [**Скриншот**](./screenshot/README.md)
-
 
 ### [Метод 2](./2/README.md)
 
 ㅤ
+
 ## **Благодарность**
 
 - [XDA Forums t-4486817#post-89464596](https://xdaforums.com/t/4486817/post-89464596)
